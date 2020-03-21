@@ -1,3 +1,3 @@
-# Suduko Solver
+# Sudoku Solver
 
-This is a simple Python script that solves Suduko puzzles.
+This is a simple Python script that solves Sudoku puzzles.
