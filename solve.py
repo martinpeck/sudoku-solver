@@ -1,4 +1,5 @@
 import solver.sudoku_solver
+import argparse
 
 def main(puzzle_file_path):
 
@@ -7,5 +8,9 @@ def main(puzzle_file_path):
   solved = solver.sudoku_solver.solve_grid(grid)
   solver.sudoku_solver.print_grid("Solution", grid)
 
-if __name__ == "__main__":
-  main('./puzzles/puzzle-1-grid.txt')
+
+parser = argparse.ArgumentParser(description='Sudoku Solver')
+parser.add_argument('gridpath', metavar='FILEPATH', help='path to sudoku grid to solve')
+args = parser.parse_args()
+
+main(args.gridpath)
