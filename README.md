@@ -15,7 +15,55 @@ The important files and folders are described here:
 └── tests                   # folder containing pytest unit tests
 ```
 
-## How it Works
+## Requirements
+
+- This code was written using Python 3.8.2, but it should work with any recent Python 3 version.
+- If you want to run the pytest unit tests, you will need to install pytest. You can do this by running `pip install -r requirements-dev.txt`
+
+## Running the Code
+
+You can view the usage by running `python solve.py -h` from the command line:
+
+``` bash
+python solve.py -h                         
+usage: solve.py [-h] FILEPATH
+
+Sudoku Solver
+
+positional arguments:
+  FILEPATH    path to sudoku grid to solve
+
+optional arguments:
+  -h, --help  show this help message and exit
+```
+
+To solve one of the supplied sudoku puzzles, run the code as follows:
+
+``` bash
+python solve.py ./puzzles/puzzle-1-grid.txt
+```
+
+## Puzzle File Format
+
+If you want to define a sudoku puzzle to solve, you need to save the grid to a file.
+
+The format is pretty simple. It's 9 rows of text, with 9 digits per row. For unknown/empty cells in the grid, use a `0`.
+
+For example, here's the contents of `puzzles/puzzle-1-grid.txt`:
+
+``` text
+047850000
+900023050
+005000367
+008174239
+000608000
+104092800
+461000900
+070940003
+000065740
+```
+
+## How the Code Works
 
 The concept it pretty simple:
 
