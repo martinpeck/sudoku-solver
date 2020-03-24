@@ -1,7 +1,7 @@
 import solver.sudoku_solver as solver
 
 def test_load_puzzle():
-  grid = solver.load_puzzle("./tests/test_puzzles/test_load_puzzle.txt")
+  grid = solver.load_puzzle("./puzzles/puzzle-3-solution.txt")
 
   expected_grid = [[1,2,3,4,5,6,7,8,9],
                    [4,5,6,7,8,9,1,2,3],
