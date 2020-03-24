@@ -1,4 +1,4 @@
-def load_puzzle(file):
+def load_grid(file):
   grid = []
   with open(file, 'r') as f:
     for line in f.readlines():
