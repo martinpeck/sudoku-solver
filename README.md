@@ -133,11 +133,11 @@ Each of these is an invalid solution. We find that `6` is valid, and so we move 
 
 ![](images/example2.png)
 
-**HOWEVER** when we try solutions in this cell, we find that none of the numbers from 1 to 9 are valid - all of themc
+**HOWEVER** when we try solutions in this cell, we find that none of the numbers from 1 to 9 are valid - all of them
 clash with values in the row, the coloumn, and the 3x3 grid! This is where the backtracking comes in, as `solve_grid` returns `False`, and this causes the caller (the previous instance of `solve_grid` on the stack) to replace the current
 solution (`6`) with the next potential solution (in this case, `7`).
 
-![](images/example2.png)
+![](images/example3.png)
 
 The value `7` is valid, and so the algorithm goes on.
 
